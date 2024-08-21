@@ -7,10 +7,11 @@ export default defineConfig({
   build: {
     target: 'es2020',
     rollupOptions: {
-        external: 'suiet/wallet-kit'
-      }
+      external: ['@suiet/wallet-kit'],
+    },
   },
   optimizeDeps: {
+    include: ['@suiet/wallet-kit'],
     esbuildOptions: {
       target: 'es2020',
       define: {
